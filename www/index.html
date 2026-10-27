@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TIP Gaming Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top">
+        <div class="bar">
+            <a class="brand" href="index.html">TIP Gaming Shop</a>
+            <nav>
+                <a class="here" href="index.html">Home</a>
+                <a href="/dashboard?role=Customer">Shop</a>
+                <a href="about.html">About Us</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="contacts.html">Contacts</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to the TIP Gaming Shop</h1>
+            <p>Keyboards, mice and storage. Check what's in stock, pick your gear and pay at checkout.</p>
+            <div class="row">
+                <a class="startbtn" href="#customer">Start shopping</a>
+            </div>
+        </section>
+
+        <!-- customers come first: just type a name, no password -->
+        <section class="card narrow" id="customer">
+            <h2>Start shopping</h2>
+            <form method="post" action="/login">
+                <label>Your name
+                    <input name="username" type="text" autocomplete="name" required>
+                </label>
+                <button type="submit">Continue</button>
+            </form>
+            <p class="muted" style="margin-top:12px">No account needed. Or <a href="/dashboard?role=Customer">browse without a name</a>.</p>
+        </section>
+
+        <!-- staff login is smaller and sits below the customer section -->
+        <section class="card narrow" id="staff">
+            <h2>Staff login</h2>
+            <p class="muted">For Supervisor, Inventory Admin and Cashier accounts only.</p>
+            <form method="post" action="/login">
+                <label>Username
+                    <input name="username" type="text" autocomplete="username" required>
+                </label>
+                <label>Password
+                    <input name="password" type="password" autocomplete="current-password" required>
+                </label>
+                <button class="ghost" type="submit">Log in</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>TIP Gaming Shop, a school project for Introduction to Computing.</footer>
+
+</body>
+</html>
